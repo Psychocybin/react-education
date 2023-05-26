@@ -1,11 +1,20 @@
+import TodoList from './components/TodoList.js';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
+        <h1>ToDo App</h1>
       </header>
+
+      <main>
+        <h2>Tasks</h2>
+        <TodoList />
+      </main>
+      <footer>
+        <p>All rights reserved &copy;</p>
+      </footer>
     </div>
   );
 }
