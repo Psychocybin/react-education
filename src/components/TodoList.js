@@ -9,10 +9,10 @@ class TodoList extends React.Component {
                 <h2>Tasks</h2>
 
                 <ul>
-                    <TodoListItem text="Clean your room"/>
-                    <TodoListItem text="Go fishing"/>
-                    <TodoListItem text="LearnReact"/>
-                    <TodoListItem text="Alino"/>
+                    <TodoListItem color="blue" text="Clean your room"/>
+                    <TodoListItem color="red" text="Go fishing"/>
+                    <TodoListItem color="yellow" text="LearnReact"/>
+                    <TodoListItem color="purple" text="Alino"/>
                     <TodoListItemChildren>Children text</TodoListItemChildren>
                 </ul>
             </>

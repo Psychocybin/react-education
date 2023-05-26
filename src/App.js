@@ -1,4 +1,6 @@
 import TodoList from './components/TodoList.js';
+import Purposes from './components/Purposes.js';
+import Footer from './components/Footer.js';
 import './App.css';
 
 function App() {
@@ -10,9 +12,10 @@ function App() {
 
       <main>
         <TodoList />
+        <Purposes />
       </main>
       <footer>
-        <p>All rights reserved &copy;</p>
+        <Footer color="green">All rights reserved &copy;</Footer>
       </footer>
     </div>
   );
