@@ -1,3 +1,5 @@
+import TodoListItem from './TodoListItem';
+import TodoListItemChildren from './TodoListItemChildren';
 import React from 'react';
 
 class TodoList extends React.Component {
@@ -7,10 +9,11 @@ class TodoList extends React.Component {
                 <h2>Tasks</h2>
 
                 <ul>
-                    <li>Clean your room</li>
-                    <li>Go shoping</li>
-                    <li>Learn React</li>
-                    <li>Alino</li>
+                    <TodoListItem text="Clean your room"/>
+                    <TodoListItem text="Go fishing"/>
+                    <TodoListItem text="LearnReact"/>
+                    <TodoListItem text="Alino"/>
+                    <TodoListItemChildren>Children text</TodoListItemChildren>
                 </ul>
             </>
         );
