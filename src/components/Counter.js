@@ -11,7 +11,12 @@ function Counter(props) {
 
     return(
         <>
-        <h2>Counter - {name}</h2>
+        {name && <h2>Counter - {name}</h2>}
+
+        {name === 'Pesho' 
+            ? <h3>He is the best!</h3> 
+            : <h3>wtf?</h3>
+        }
 
         <ul>
             <SinglePurpose>{count}</SinglePurpose>
