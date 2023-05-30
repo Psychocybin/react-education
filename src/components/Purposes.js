@@ -2,7 +2,12 @@ import React from "react";
 import SinglePurpose from "./SinglePurpose";
 
 function Purposes() {
-    let [content, setContent] = React.useState(['work', 'education', 'travel', 'games']);
+    let [content, setContent] = React.useState([
+        {id: 1, text: 'work'},
+        {id: 2, text: 'education'},
+        {id: 3, text: 'travel'},
+        {id: 4, text: 'games'},
+    ]);
     
     // let content = contentState[0];
     // let setContent = contentState[1];

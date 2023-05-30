@@ -2,6 +2,7 @@ import TodoList from './components/TodoList.js';
 import Purposes from './components/Purposes.js';
 import Footer from './components/Footer.js';
 import Counter from './components/Counter.js';
+import ArrayNumbers from './components/ArrayNumbers';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       </header>
 
       <main>
+        <ArrayNumbers />
         <TodoList />
         <Purposes />
         <Counter />
