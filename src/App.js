@@ -1,8 +1,9 @@
-import TodoList from './components/TodoList.js';
-import Purposes from './components/Purposes.js';
+// import TodoList from './components/TodoList.js';
+// import Purposes from './components/Purposes.js';
+// import Counter from './components/Counter.js';
+// import ArrayNumbers from './components/ArrayNumbers';
 import Footer from './components/Footer.js';
-import Counter from './components/Counter.js';
-import ArrayNumbers from './components/ArrayNumbers';
+import TodoList2 from './components/TodoList2.js';
 import './App.css';
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
       </header>
 
       <main>
-        <ArrayNumbers />
+        {/* <ArrayNumbers />
         <TodoList />
         <Purposes />
-        <Counter />
+        <Counter /> */}
+        <TodoList2 />
       </main>
       <footer>
         <Footer color="green">All rights reserved &copy;</Footer>

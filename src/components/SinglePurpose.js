@@ -8,7 +8,13 @@ function SinglePurpose(props) {
     if (props.children > 0) {
         color = 'pink';
 
-        return <li style={{color}}>{props.children}</li>
+        let numbers = [];
+
+        for (let index = 0; index < props.children; index++) {
+            numbers.push(index + 1);
+        }
+        
+        return numbers.map(x => <li style={{color}}>{props.children}</li>)
     }
 
     return <li key={props.children.id}>{props.children.text}</li>
