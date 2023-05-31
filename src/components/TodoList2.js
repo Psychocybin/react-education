@@ -28,7 +28,7 @@ export default function TodoList2() {
     console.log('update');
 
     const deleteTodoItemClickHandler = (id) => {
-        console.log('delete, ', id);
+        setTodos(oldTodos => oldTodos.filter(todo => todo.id != id));
     };
 
     return(
