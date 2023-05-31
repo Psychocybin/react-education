@@ -1,4 +1,5 @@
 import { useState } from "react";
+import uniqid from 'uniqid';
 import TodoItem from "./TodoItem";
 
 export default function TodoList2() {
@@ -11,7 +12,7 @@ export default function TodoList2() {
  
     const onTodoInputBlur = (e) => {
         let todo = {
-            id: todos.length + 1,
+            id: uniqid(),
             text: e.target.value,
         };
 
@@ -28,7 +29,7 @@ export default function TodoList2() {
     console.log('update');
 
     const deleteTodoItemClickHandler = (id) => {
-        setTodos(oldTodos => oldTodos.filter(todo => todo.id != id));
+        setTodos(oldTodos => oldTodos.filter(todo => todo.id !== id));
     };
 
     return(
