@@ -4,10 +4,10 @@ import TodoItem from "./TodoItem";
 
 export default function TodoList2() {
     const [todos, setTodos] = useState([
-        {id: uniqid(), text: 'Party for birthday', isDone: false},
-        {id: uniqid(), text: 'Menu for parents', isDone: false},
-        {id: uniqid(), text: 'Menu for friends', isDone: false},
-        {id: uniqid(), text: 'The bill', isDone: false},
+        {id: 1, text: 'Party for birthday', isDone: false},
+        {id: 2, text: 'Menu for parents', isDone: false},
+        {id: 3, text: 'Menu for friends', isDone: false},
+        {id: 4, text: 'The bill', isDone: false},
     ]);
  
     const onTodoInputBlur = (e) => {
@@ -29,7 +29,8 @@ export default function TodoList2() {
 
     //console.log('update');
 
-    const deleteTodoItemClickHandler = (id) => {
+    const deleteTodoItemClickHandler = (e, id) => {
+        e.stopPropagation();
         setTodos(oldTodos => oldTodos.filter(todo => todo.id !== id));
     };
 
@@ -58,9 +59,13 @@ export default function TodoList2() {
         setTodos(oldTodos => {
             let selectedTodo = oldTodos.find(x => x.id === id);
             let toggledTodo = {...selectedTodo, isDone: !selectedTodo.isDone};
-            let restTodos = oldTodos.filter(x => x.id !== id);
+            let selectedIndex = oldTodos.findIndex(x => x.id === id);
 
-            return [...restTodos, toggledTodo];
+            return [
+                ...oldTodos.slice(0, selectedIndex),
+                toggledTodo,
+                ...oldTodos.slice(selectedIndex + 1),
+            ];
         });
     };
 

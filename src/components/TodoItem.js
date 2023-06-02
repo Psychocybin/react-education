@@ -15,9 +15,9 @@ export default function TodoItem({
     // }, [todo.id]);
 
     return (
-        <li onClick={() => onClick(todo.id)} className={styles.todoItem}>
+        <li onClick={() => onClick(todo.id)} className={styles.todoItemDone}>
             {todo.text}
-            <button onClick={() => onDelete(todo.id)}>x</button>
+            <button onClick={(e) => onDelete(e, todo.id)}>x</button>
         </li>
     );
 };

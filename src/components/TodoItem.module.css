@@ -1,3 +1,7 @@
 .todoItem {
     color: aquamarine;
 }
+
+.todoItemDone {
+    text-decoration: line-through;
+}
